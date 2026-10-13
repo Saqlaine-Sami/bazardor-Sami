@@ -12,16 +12,14 @@ export default async function Navbar() {
         <header className="bg-white">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
                 <Link href="/" className="flex min-w-0 items-center gap-3 sm:gap-4">
-                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[#0a8f3c] sm:h-14 sm:w-14">
-                        <Image
-                            src="/logo-icon.png"
-                            alt="বাজার দর"
-                            width={32}
-                            height={32}
-                            className="h-7 w-7 object-contain sm:h-8 sm:w-8"
-                            priority
-                        />
-                    </span>
+                    <Image
+                        src="/logo-icon.png"
+                        alt="বাজার দর"
+                        width={112}
+                        height={112}
+                        className="h-12 w-12 shrink-0 rounded-2xl sm:h-14 sm:w-14"
+                        priority
+                    />
                     <span>
                         <span className="block text-2xl font-bold leading-tight text-[#1a2a1f] sm:text-3xl">
                             বাজার দর
