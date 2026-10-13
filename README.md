@@ -4,8 +4,8 @@
 
 **বাজার দর** হলো বাংলাদেশের নিত্যপ্রয়োজনীয় পণ্য (চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম-দুধ ও মসলা) এর আজকের বাজারদর দেখার একটি ওয়েব অ্যাপ। এখানে প্রতিটি পণ্যের আজকের দাম, গতকালের তুলনায় পরিবর্তন এবং বিভিন্ন বাজারের সর্বনিম্ন, সর্বাধিক ও গড় দাম এক জায়গায় দেখা যায়।
 
-🔗 **Live Link:** https://YOUR-APP.vercel.app
-📦 **GitHub:** https://github.com/YOUR_USERNAME/bazardor
+🔗 **Live Link:** https://bazardor-sami.vercel.app/
+📦 **GitHub:** https://github.com/Saqlaine-Sami/bazardor-Sami
 
 ## ✨ Key Features
 
@@ -36,7 +36,7 @@
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/bazardor.git
+git clone https://github.com/Saqlaine-Sami/bazardor-Sami.git
 cd bazardor
 npm install
 ```
