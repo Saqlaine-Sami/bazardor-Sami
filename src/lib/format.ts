@@ -30,3 +30,10 @@ export const CHANGE_META: Record<
 
 // pct: -2.9 → "২.৯%"
 export const pctBn = (pct: number) => `${bnDigits(Math.abs(pct).toFixed(1))}%`;
+
+// ৬৩.৫ → "৬৩.৫০", ৬২ → "৬২", ২২৯২.৫ → "২,২৯২.৫০"
+export function toBnPrice(n: number): string {
+    if (Number.isInteger(n)) return toBn(n);
+    const [int, dec] = n.toFixed(2).split(".");
+    return `${toBn(Number(int))}.${bnDigits(dec)}`;
+}
