@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Hind_Siliguri } from "next/font/google";
 import { Toaster } from "react-hot-toast";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import PriceTicker from "@/components/PriceTicker";
 import "./globals.css";
@@ -24,12 +25,12 @@ export default function RootLayout({
   return (
     <html lang="bn" data-theme="light">
       <body
-        className={`${hind.variable} min-h-screen bg-[#f2f5f1] text-gray-900 antialiased`}
+        className={`${hind.variable} flex min-h-screen flex-col bg-[#f2f5f1] text-gray-900 antialiased`}
       >
         <Navbar />
         <PriceTicker />
-        <main className="mx-auto w-full max-w-6xl px-4">{children}</main>
-        {/* ধাপ ৮-এ এখানে Footer বসবে */}
+        <main className="mx-auto w-full max-w-6xl flex-1 px-4">{children}</main>
+        <Footer />
         <Toaster position="top-center" />
       </body>
     </html>

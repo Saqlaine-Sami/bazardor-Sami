@@ -11,7 +11,7 @@ export default async function Navbar() {
     return (
         <header className="bg-white">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-                <Link href="/" className="flex items-center gap-3">
+                <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
                     <span className="grid h-11 w-11 place-items-center rounded-xl bg-green-700 sm:h-12 sm:w-12">
                         <Image src="/logo-icon.png" alt="বাজার দর" width={48} height={48} className="rounded-xl" />
                     </span>
@@ -19,7 +19,7 @@ export default async function Navbar() {
                         <span className="block text-lg font-bold leading-tight sm:text-xl">
                             বাজার দর
                         </span>
-                        <span className="block text-xs text-gray-600">{bnToday()}</span>
+                        <span className="block text-[11px] leading-tight text-gray-600 sm:text-xs">{bnToday()}</span>
                     </span>
                 </Link>
                 <AuthButtons />
