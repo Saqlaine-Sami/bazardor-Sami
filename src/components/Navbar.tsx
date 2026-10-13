@@ -1,9 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getCategories } from "@/lib/api";
 import { bnToday } from "@/lib/bn";
 import AuthButtons from "./AuthButtons";
 import CategoryNav from "./CategoryNav";
-import Image from "next/image";
 
 export default async function Navbar() {
     const categories = await getCategories();
@@ -11,15 +11,24 @@ export default async function Navbar() {
     return (
         <header className="bg-white">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-                <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
-                    <span className="grid h-11 w-11 place-items-center rounded-xl bg-green-700 sm:h-12 sm:w-12">
-                        <Image src="/logo-icon.png" alt="বাজার দর" width={48} height={48} className="rounded-xl" />
+                <Link href="/" className="flex min-w-0 items-center gap-3 sm:gap-4">
+                    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[#0a8f3c] sm:h-14 sm:w-14">
+                        <Image
+                            src="/logo-icon.png"
+                            alt="বাজার দর"
+                            width={32}
+                            height={32}
+                            className="h-7 w-7 object-contain sm:h-8 sm:w-8"
+                            priority
+                        />
                     </span>
                     <span>
-                        <span className="block text-lg font-bold leading-tight sm:text-xl">
+                        <span className="block text-2xl font-bold leading-tight text-[#1a2a1f] sm:text-3xl">
                             বাজার দর
                         </span>
-                        <span className="block text-[11px] leading-tight text-gray-600 sm:text-xs">{bnToday()}</span>
+                        <span className="block text-xs leading-tight text-gray-800 sm:text-base">
+                            {bnToday()}
+                        </span>
                     </span>
                 </Link>
                 <AuthButtons />
